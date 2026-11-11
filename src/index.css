@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --- NeuroScan palette: deep green / white / emerald accent --- */
+    --background: 120 20% 98%;
+    --foreground: 152 35% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 152 35% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 35% 10%;
+    --primary: 152 60% 20%;
+    --primary-foreground: 120 20% 98%;
+    --secondary: 130 25% 94%;
+    --secondary-foreground: 152 45% 16%;
+    --muted: 130 15% 94%;
+    --muted-foreground: 150 8% 38%;
+    --accent: 158 84% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 140 12% 88%;
+    --input: 140 12% 85%;
+    --ring: 158 84% 32%;
+    --radius: 0.875rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Manrope", -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.22);
+  }
+
+  .font-mono-num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Интерактивные ползунки калькулятора */
+.neuro-range {
+  --range-progress: 50%;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.neuro-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #059669 0%, #34d399 var(--range-progress), #e7f3ed var(--range-progress), #e7f3ed 100%);
+}
+
+.neuro-range::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #e7f3ed;
+}
+
+.neuro-range::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #059669, #34d399);
+}
+
+.neuro-range::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.neuro-range::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.neuro-range:hover::-webkit-slider-thumb,
+.neuro-range:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.18);
+  box-shadow: 0 2px 14px rgba(5, 150, 105, 0.5);
+}
+
+.neuro-range:hover::-moz-range-thumb,
+.neuro-range:focus-visible::-moz-range-thumb {
+  transform: scale(1.18);
+  box-shadow: 0 2px 14px rgba(5, 150, 105, 0.5);
+}
+
+.neuro-range:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 5px;
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
