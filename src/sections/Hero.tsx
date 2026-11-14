@@ -227,7 +227,7 @@ export function Hero() {
               className="relative overflow-hidden rounded-3xl border border-emerald-900/10 shadow-[0_50px_100px_-30px_rgba(15,60,40,0.45)] will-change-transform"
             >
               <img
-                src="/assets/hero-interface.png"
+                src="assets/hero-interface.png"
                 alt="Интерфейс NeuroScan: КТ грудной клетки с подсвеченной нейросетью зоной риска и черновиком заключения"
                 className="block w-full"
                 loading="eager"

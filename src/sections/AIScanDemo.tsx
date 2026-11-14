@@ -113,13 +113,13 @@ export function AIScanDemo() {
             <div className="grid md:grid-cols-[1.1fr_0.9fr]">
               <div className="relative min-h-[320px] overflow-hidden bg-black sm:min-h-[390px]">
                 <img
-                  src="/assets/xray-plain.png"
+                  src="assets/xray-plain.png"
                   alt="Учебный рентген-снимок для демонстрации интерфейса"
                   className="absolute inset-0 h-full w-full object-cover"
                   draggable={false}
                 />
                 <motion.img
-                  src="/assets/xray-marked.png"
+                  src="assets/xray-marked.png"
                   alt=""
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover"

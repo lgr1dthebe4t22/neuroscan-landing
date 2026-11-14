@@ -83,7 +83,7 @@ export function BeforeAfter() {
             }}
           >
             <img
-              src="/assets/xray-marked.png"
+              src="assets/xray-marked.png"
               alt="Рентген-снимок с разметкой нейросети: зоны риска подсвечены зелёным"
               className="block w-full"
               draggable={false}
@@ -93,7 +93,7 @@ export function BeforeAfter() {
               style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
             >
               <img
-                src="/assets/xray-plain.png"
+                src="assets/xray-plain.png"
                 alt="Обычный рентген-снимок без разметки"
                 className="block h-full w-full max-w-none object-cover"
                 draggable={false}
